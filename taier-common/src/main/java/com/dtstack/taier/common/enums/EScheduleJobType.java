@@ -119,6 +119,11 @@ public enum EScheduleJobType {
     DATAX(26,"DataX", EJobType.PYTHON.getType(),14, EComponentType.DATAX, EComputeType.BATCH, EJobClientType.WORKER_PLUGIN),
 
     ORACLE_SQL(27, "OracleSQL", EJobType.SQL.getType(), 4, null, EComputeType.BATCH, EJobClientType.DATASOURCE_PLUGIN),
+
+    /**
+     * 元数据采集
+     */
+    METADATA_COLLECTION(28, "元数据采集", EJobType.SYNC.getType(), 3, null, EComputeType.BATCH, EJobClientType.WORKER_PLUGIN),
     ;
 
     private final Integer type;
@@ -126,7 +131,7 @@ public enum EScheduleJobType {
     private final String name;
 
     /**
-     * 引擎能够接受的jobType
+     * 引擎能够接受的 jobType
      * SQL              0
      * MR               1
      * SYNC             2
